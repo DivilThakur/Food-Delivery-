@@ -39,7 +39,7 @@ export const userLogin = async (req, res) => {
 export const userRegister = async (req, res) => {
     try {
         const { name, email, password } = req.body;
-
+        
         const exist = await userModel.findOne({ email });
         if (exist) {
             return res.json({ success: false, message: "Email already exist" });
@@ -61,7 +61,7 @@ export const userRegister = async (req, res) => {
         const user = await newUser.save();
         const token = createToken(user._id);
 
-        res.json({ success: true, token, message: "Signed In", user: exist.name });
+        res.json({ success: true, token, message: "Signed In", user: user.name });
 
     } catch (error) {
         console.log("error in register (user controller) ", error.message);

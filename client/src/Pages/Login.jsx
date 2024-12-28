@@ -16,6 +16,11 @@ const Login = () => {
         password: ""
     })
 
+    useEffect(()=>{
+        console.log(formData);
+
+    },[formData]);
+
     useEffect(() => {
         window.scrollTo(0, 0);
         document.body.style.overflow = "hidden";
