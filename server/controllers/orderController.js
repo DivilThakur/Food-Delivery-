@@ -39,7 +39,6 @@ export const placeOrder = async (req, res) => {
 
             newOrder.razorpayOrderId = order.id;
             await newOrder.save();
-            
             res.json({
                 success: true,
                 message: "order successfull",
@@ -68,7 +67,7 @@ export const verifyPayment = async(req,res) =>{
             const generatedSignature = crypto.createHmac('sha256',secret).update(orderId+"|"+paymentId).digest('hex');
 
             if(generatedSignature === signature){
-                order.status = true
+                order.payment = true;
                 await order.save();
                 res.json({ success: true, message: 'Payment verified successfully' });
             } else {
