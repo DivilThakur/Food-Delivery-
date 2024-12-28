@@ -40,7 +40,6 @@ const Checkout = () => {
 
         try {
             let response = await axios.post(backendUrl + "/api/order/placeOrder", orderData, { headers: { token } })
-            console.log(response.data);
 
             if (response.data.success) {
                 const razorpayOrder = response.data.order;
