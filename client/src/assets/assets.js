@@ -1,5 +1,5 @@
 
-import logo from './logo.png'
+import brandLogo from './brandLogo.png'
 import hero_image from './hero-image.png'
 import hero_wave from './hero-wave.svg'
 import category1 from './categories_1.png'
@@ -79,7 +79,7 @@ import user from './user.png'
 
 
 export const assets = {
-    logo, hero_image, hero_wave, category1,
+    brandLogo, hero_image, hero_wave, category1,
     category2, category3, category4,
     delivery, support, payment, absolute1, absolute2,
     bannerbg, bannercupcake, bannershape, bannerstar,

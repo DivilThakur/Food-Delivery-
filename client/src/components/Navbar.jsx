@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className=' flex justify-between sm:justify-around items-center p-2 lg:mx-20 '>
                 <motion.div initial={{opacity:0}} animate={{opacity:1}}
                         transition={{duration:0.7}} className='p-4'>
-                    <img onClick={() => navigate("/")} className='cursor-pointer' src={assets.logo} alt="" />
+                    <img onClick={() => navigate("/")} className='cursor-pointer  w-20 md:w-28' src={assets.brandLogo} alt="" />
                 </motion.div>
                 <div className='hidden sm:block'>
                     <ul className='flex gap-5 md:gap-10 font-Outfit font-medium text-lg'>
